@@ -1,7 +1,4 @@
 
-
-
-
 const Article1 = (props)=>{
 
     const {title, author, text} = props
@@ -18,9 +15,11 @@ const Article1 = (props)=>{
                 marginBottom: 10,
                 fontSize: 14
                 }}>{author}</span>
-            <p style={{fontSize: 16}}>{text}</p>
+            <p style={{fontSize: 16}}>{}</p>
 
-            <div>aads <p>adsaas dsadsdas dsad  s</p> </div>
+            <div>
+                <p>Artykuł</p>
+            </div>
 
         </article>
     )
