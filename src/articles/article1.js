@@ -1,0 +1,30 @@
+
+
+
+
+const Article1 = (props)=>{
+
+    const {title, author, text} = props
+
+    const styles = {
+        marginTop: 40
+    }
+
+    return(
+        <article  style={styles}>
+            <h3 style={{ marginBottom: 3 , textTransform: "uppercase" }} >{title}</h3>
+            <span style={{
+                display: "block",
+                marginBottom: 10,
+                fontSize: 14
+                }}>{author}</span>
+            <p style={{fontSize: 16}}>{text}</p>
+
+            <div>aads <p>adsaas dsadsdas dsad  s</p> </div>
+
+        </article>
+    )
+
+}
+
+export default Article1
