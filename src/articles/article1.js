@@ -15,12 +15,7 @@ const Article1 = (props)=>{
                 marginBottom: 10,
                 fontSize: 14
                 }}>{author}</span>
-            <p style={{fontSize: 16}}>{}</p>
-
-            <div>
-                <p>Artykuł</p>
-            </div>
-
+            <p style={{fontSize: 16}}>{text}</p>
         </article>
     )
 
