@@ -1,6 +1,5 @@
 import React from 'react';
 import '../styles/App.css';
-import '../styles/kot.scss';
 import Header from './Header';
 import Navigation from './Navigation';
 import Page from './Page';
