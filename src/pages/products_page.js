@@ -28,7 +28,7 @@ const articles = [
         id: 3,
         title: "Kościelec" ,
         author: "Mateusz Pęzioł",
-        text: `Majestatyczny szczyt nazywany polskim Matterhornem. Najczęściej odwiedzany przezemnie szczyt.`
+        text: `Majestatyczny szczyt nazywany polskim Matterhornem. Najczęściej odwiedzany przeze mnie szczyt.`
         
     }
 ]
