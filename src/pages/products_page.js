@@ -27,8 +27,8 @@ const articles = [
     {
         id: 3,
         title: "Kościelec" ,
-        author: "Pęzioł",
-        text: `Koscielec .`
+        author: "Mateusz Pęzioł",
+        text: `Majestatyczny szczyt nazywany polskim Matterhornem. Najczęściej odwiedzany przezemnie szczyt.`
         
     }
 ]
