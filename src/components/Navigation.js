@@ -7,7 +7,7 @@ const Navigation = ()=>{
     const li = [
         {adres: "/" , name: "Strona Główna" },
         {adres: "/products" , name: "Produkty" },
-        {adres: "/contact" , name: "Kon" },
+        {adres: "/contact" , name: "Kontakt" },
         {adres: "/admin" , name: "Panel Admina" }
     ]
 
