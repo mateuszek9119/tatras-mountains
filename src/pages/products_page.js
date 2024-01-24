@@ -5,7 +5,7 @@ const articles = [
         id: 1,
         title: "Rysy" ,
         author: "Mateusz Pęzioł",
-        text: `Rysy , najwyższy szczyt w polskich tatrach, wejście na szczyt od parkingu w Palenicy, zajęło mi 7 godzin.
+        text: `Rysy , najwyższy szczyt w polskich tatrach, i mój pierwszy z "Korony Gór Polskich" :),  wejście na szczyt od parkingu w Palenicy, zajęło mi 7 godzin.
          tyle samo trwało zejście czyli łącznie  14 godzin.`
         
     },
