@@ -6,7 +6,7 @@ const Navigation = ()=>{
 
     const li = [
         {adres: "/" , name: "Strona Główna" },
-        {adres: "/products" , name: "Produkty" },
+        {adres: "/products" , name: "Szczyty i szlaki" },
         {adres: "/contact" , name: "Kontakt" },
         {adres: "/admin" , name: "Panel Admina" }
     ]
