@@ -19,7 +19,9 @@ class Weather extends React.Component{
   }
 
   // klucz do api
-  APIkey = "dbde02f9c2b523cec86a9bdfec813df0";
+  //APIkey = "dbde02f9c2b523cec86a9bdfec813df0";
+
+  APIkey = "864b44a12dea05740819f7ae0f177350"
 
   handleInputChange = (event)=>{
 
