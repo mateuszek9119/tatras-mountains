@@ -9,7 +9,7 @@ div.app{
 }
 
 header{
-  
+
   min-height: 40vh;
   position: relative;
   overflow: hidden;
@@ -23,7 +23,7 @@ main{
 
 .burger{
   display: none;
-  position: absolute;
+  position: fixed;
   top: 2vh;
   left: 5%;
   font-size: 40px; 
