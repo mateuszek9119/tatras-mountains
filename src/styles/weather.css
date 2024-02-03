@@ -17,4 +17,7 @@
     border-top: 2px solid #ddd;
 }
 
-.app .result p{ font-weight: normal; }
+.app .result p{
+     padding: 8px;
+    font-weight: normal; 
+}
