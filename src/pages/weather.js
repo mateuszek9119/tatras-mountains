@@ -37,7 +37,7 @@ class Weather extends React.Component{
     if(this.state.value.length === 0) return
     if(prevState.value !== this.state.value){
 
-      const API = `http://api.openweathermap.org/data/2.5/weather?q=${this.state.value},pl&APPID=${this.APIkey}`
+      const API = `https://api.openweathermap.org/data/2.5/weather?q=${this.state.value},pl&APPID=${this.APIkey}`
   
       fetch(API)
       .then(response=>{
