@@ -26,7 +26,7 @@ main{
   top: 2vh;
   left: 5%;
   font-size: 40px; 
-  color: blue;
+  color: brown;
   line-height: 50px;
   z-index: 1;
   transition: .4s linear;
