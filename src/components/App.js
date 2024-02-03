@@ -9,6 +9,20 @@ import {BrowserRouter as Router} from "react-router-dom"
 
 class App extends React.Component{
 
+  addActiveClass = ()=>{
+    const iconBurger = document.querySelector(".fa-bars")
+    const iconX = document.querySelector(".fa-circle-xmark")
+    const navSmartfon = document.querySelector("aside")
+
+
+    iconBurger.classList.toggle("show")
+    iconX.classList.toggle("show")
+    navSmartfon.classList.toggle("show")
+    iconX.style.color="white"
+   
+
+  }
+
   render(){
     return(
       <Router basename={process.env.PUBLIC_URL}>
@@ -17,6 +31,11 @@ class App extends React.Component{
               <Header />
           </header>
           <main class="main">
+
+            <div class="burger" onClick={this.addActiveClass}>
+              <i class="icon fa-solid fa-bars show"></i>
+              <i class="icon fa-regular fa-circle-xmark"></i>
+            </div>
             <aside>
               <Navigation />
             </aside>

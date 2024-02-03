@@ -20,11 +20,61 @@ main{
   flex-grow: 1;
 }
 
-aside{
-  min-width: 240px;
+.burger{
+  display: none;
+  position: absolute;
+  top: 2vh;
+  left: 5%;
+  font-size: 40px; 
+  line-height: 50px;
+  z-index: 1;
+  transition: .4s linear;
 }
 
+.burger:hover{ cursor: pointer; }
+
+aside{
+  min-width: 22%;
+  border-right: 2px solid white;
+}
+
+i.icon{ display: none}
+i.show{display: block;}
+
+aside.show{ left: 0}
+
+
+@media (max-width: 900px) {
+
+  div.app{ width: 100%;}
+
+  aside {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -70%;
+    padding-top: 40vh;
+    min-width: 26%;
+    background-color: rgba(0, 0, 0, .8);
+    transition: .3s linear;
+    
+  }
+
+  aside nav.main a{
+    color: white;
+    font-size: 10px;
+    padding: 20px;
+  }
+
+  aside nav.main a.active{ border-left: 5px solid grey; }
+
+  .burger{display: block;}
+
+}
+
+
 section.page{
+  padding-left: 4%;
   flex-grow: 1;
 }
 

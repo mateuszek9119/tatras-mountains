@@ -39,6 +39,6 @@ nav.main li:nth-child(3) a.active {
 }
 
 nav.main li:nth-child(4) a.active {
-    border-left-color:orange; 
+    border-left-color:rgb(155, 121, 57); 
 }
 

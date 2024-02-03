@@ -1,4 +1,3 @@
-
 import { NavLink } from "react-router-dom"
 import '../styles/navigation.css'
 
@@ -14,14 +13,11 @@ const Navigation = ()=>{
     const nav = li.map( item => <li key={item.name}> <NavLink to={item.adres} > {item.name} </NavLink> </li>)
 
     return(
-        <div>
             <nav className="main">
                 <ul>
                     { nav }
                 </ul>
             </nav>
-         
-        </div>
     )
 }
 
