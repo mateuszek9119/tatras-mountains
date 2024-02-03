@@ -4,6 +4,7 @@ import ProductsPage from "../pages/products_page";
 import ContactPage from "../pages/contact_page";
 import AdminPage from "../pages/admin_pages";
 import ErrorPage from "../pages/error_page";
+import Weather from "../pages/weather";
 
 const Page = ()=>{
 
@@ -11,6 +12,7 @@ const Page = ()=>{
         <Routes>
               <Route path="/" element={ <HomePage /> } />
               <Route path="/products" element={<ProductsPage />}/>
+              <Route path="/weather" element={<Weather/>}/>
               <Route path="/contact" element={<ContactPage />}/>
               <Route path="/admin" element={<AdminPage />}/>
               <Route path="*" element={<ErrorPage />}/>

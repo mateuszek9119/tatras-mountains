@@ -1,16 +1,19 @@
 import { NavLink } from "react-router-dom"
 import '../styles/navigation.css'
 
-const Navigation = ()=>{
+const Navigation = (props)=>{
+
+    const hideNavigation = ()=> (window.innerWidth < 900) ? props.click():null;        
 
     const li = [
         {adres: "/" , name: "Strona Główna" },
         {adres: "/products" , name: "Szczyty i szlaki" },
+        {adres: "/weather" , name: "Pogoda" },
         {adres: "/contact" , name: "Kontakt" },
         {adres: "/admin" , name: "Panel Admina" }
     ]
 
-    const nav = li.map( item => <li key={item.name}> <NavLink to={item.adres} > {item.name} </NavLink> </li>)
+    const nav = li.map( item => <li key={item.name} onClick={hideNavigation}>  <NavLink to={item.adres} > {item.name} </NavLink> </li>)
 
     return(
             <nav className="main">

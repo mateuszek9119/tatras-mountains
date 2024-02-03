@@ -3,6 +3,7 @@ import '../styles/App.css';
 import Header from './Header';
 import Navigation from './Navigation';
 import Page from './Page';
+
 import Footer from './Footer';
 import {BrowserRouter as Router} from "react-router-dom"
 
@@ -37,7 +38,7 @@ class App extends React.Component{
               <i class="icon fa-regular fa-circle-xmark"></i>
             </div>
             <aside>
-              <Navigation />
+              <Navigation click = {this.addActiveClass} />
             </aside>
          
             <section className="page"> 

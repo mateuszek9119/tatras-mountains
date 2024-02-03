@@ -1,7 +1,7 @@
 const Footer = ()=>{
 
     return(
-        <div>Footer</div>
+        <div>Tatrzańskie Przechadzki</div>
     )
 }
 
