@@ -3,7 +3,13 @@ import '../styles/navigation.css'
 
 const Navigation = (props)=>{
 
-    const hideNavigation = ()=> (window.innerWidth < 900) ? props.click():null;        
+    const hideNavigation = ()=>{ 
+        
+        if(window.innerWidth < 900){
+            props.click()
+            window.scroll(0,0)
+        } 
+    }       
 
     const li = [
         {adres: "/" , name: "Strona Główna" },
@@ -13,7 +19,7 @@ const Navigation = (props)=>{
         {adres: "/admin" , name: "Panel Admina" }
     ]
 
-    const nav = li.map( item => <li key={item.name} onClick={hideNavigation}>  <NavLink to={item.adres} > {item.name} </NavLink> </li>)
+    const nav = li.map( item => <li key={item.name} onClick={hideNavigation }>  <NavLink to={item.adres} > {item.name} </NavLink> </li>)
 
     return(
             <nav className="main">
