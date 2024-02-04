@@ -3,6 +3,7 @@ const HomePage = (props)=>{
 
     return(
         <div className="home">
+            <h1>TATRZAŃSKIE PRZECHADZKI</h1>
             <p>Strona jest poświęcona górom , szlakom oraz aktualnej pogodzie panującej w górach. Opisuję tutaj szlaki
             na których byłem. </p>
             <br/>

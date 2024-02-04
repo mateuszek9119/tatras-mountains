@@ -22,6 +22,10 @@ main{
 }
 
 .home{ text-align: justify; }
+.home h1{ 
+  text-align: center; 
+  padding-bottom: 5vh;
+}
 
 .burger{
   display: none;
