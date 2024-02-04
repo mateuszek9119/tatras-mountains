@@ -8,7 +8,7 @@ header img{
     min-height: 100%;   
 }
 
-@media( max-width: 400px){
+@media( max-width: 450px){
 
     header img.asign{
         height: 110%;
