@@ -5,6 +5,25 @@ header img{
     left: 50%;
     transform: translate(-50%, -50%);
     min-width: 100%;
-    min-height: 100%;
-    
+    min-height: 100%;   
+}
+
+header img.asign{
+    height: 110%;
+    width: 110%;
+}
+
+header img.rocks{
+    height: 100%;
+    width: 100%;
+}
+
+header img.trail{
+    height: 100%;
+    width: 100%;
+}
+
+header img.contact{
+    height: 250%;
+    width: 250%;
 }

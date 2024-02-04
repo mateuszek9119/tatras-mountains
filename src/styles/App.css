@@ -21,10 +21,12 @@ main{
   flex-grow: 1;
 }
 
+.home{ text-align: justify; }
+
 .burger{
   display: none;
   position: fixed;
-  top: 2vh;
+  top: 4vh;
   left: 5%;
   font-size: 40px; 
   color: darkgreen;
@@ -63,13 +65,11 @@ aside.show{ left: 0}
   aside {
     position: fixed;
     top: 0;
-    bottom: 0;
     left: -70%;
     padding-top: 40vh;
     min-width: 26%;
     background-color: rgba(0, 0, 0, .8);
-    transition: .3s linear;
-    
+    transition: .3s linear; 
   }
 
   aside nav.main a{
@@ -90,7 +90,8 @@ aside.show{ left: 0}
 
 
 section.page{
-  padding-left: 4%;
+  padding-left: 5%;
+  padding-right: 5%;
   flex-grow: 1;
 }
 

@@ -8,9 +8,10 @@ import img4 from '../images/4.jpg'
 import imgError from '../images/error.jpg'
 
 const images = [
-    {adres: "/", Img:  <img src={img1}/>}, 
-    {adres: "/products", Img: <img src={img2}/>}, 
-    {adres: "/contact", Img: <img src={img3}/>},
+    {adres: "/", Img:  <img class="rocks" src={img1}/>}, 
+    {adres: "/products", Img: <img class="trail" src={imgError}/>},
+    {adres: "/weather" , Img: <img class="asign" src={img2}/> }, 
+    {adres: "/contact", Img: <img class="contact" src={img3}/>},
     {adres: "/admin", Img: <img src={img4}/>},
     {adres: "/*", Img: <img src={imgError}/>}
 ];
