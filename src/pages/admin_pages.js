@@ -1,9 +1,11 @@
+import "../styles/adminPages.css"
+
 const AdminPage = ()=>{
 
     return(
         <form>
-            <input />
-            <input />
+            <input type="text" placeholder="login" />
+            <input type="password" placeholder="password"/>
         </form>
     )
 
