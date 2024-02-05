@@ -25,8 +25,6 @@ class Weather extends React.Component{
 
   handleInputChange = (event)=>{
 
-    window.scrollTo(0,  window.innerHeight / 3)
-
     this.setState({
       value: event.target.value
     })
