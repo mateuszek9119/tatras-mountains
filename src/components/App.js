@@ -15,13 +15,10 @@ class App extends React.Component{
     const iconX = document.querySelector(".fa-circle-xmark")
     const navSmartfon = document.querySelector("aside")
 
-
     iconBurger.classList.toggle("show")
     iconX.classList.toggle("show")
     navSmartfon.classList.toggle("show")
     iconX.style.color="white"
-   
-
   }
 
   render(){

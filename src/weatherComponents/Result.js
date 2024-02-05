@@ -8,6 +8,8 @@ const Result =(props)=>{
 
     if(!err && city) {
     
+        window.scrollTo(0,  window.innerHeight / 3)
+
         const sunriseTime = new Date(sunrise * 1000).toLocaleTimeString();
         const sunsetTime = new Date(sunset * 1000).toLocaleTimeString();
     
@@ -26,7 +28,7 @@ const Result =(props)=>{
 
     return(
         <div className='result'>
-            {err && city.length > 1 ? `Nie ma takiego miejsca jak:" ${city}`: content}
+            {err && city.length > 1 ? `Nie ma takiego miejsca jak:" ${city}`: content }
         </div>
     )
 }
