@@ -2,7 +2,7 @@ import React from 'react'
 
 const Result =(props)=>{
 
-    const { date, city, sunrise, sunset, pressure, temp, wind, clouds, err} = props.weather
+    const { date, city, sunrise, sunset, pressure, temp, temp_feels, wind, clouds, err} = props.weather
 
     let content = null
 
@@ -18,6 +18,7 @@ const Result =(props)=>{
                 <p style={{textTransform: "uppercase"}}>Aktualna informacaje pogodowe:</p>
                 <p><strong style={{textTransform: "uppercase"}}>{city}</strong> ( <em>{date}</em> )</p>
                 <p>Temperatura: {temp} &#176;C</p>
+                <p>Temperatura odczuwalna: {temp_feels} &#176;C</p>
                 <p>Siła wiatru: { Math.round((wind * 3.6)*10)/10 } km/h</p>
                 <p>Zachmurzenie: {clouds}%</p>
                 <p>Wschód słońca: {sunriseTime}</p>
