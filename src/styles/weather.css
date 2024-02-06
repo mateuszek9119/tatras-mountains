@@ -15,18 +15,27 @@
 .app div.placesWeather{
     display: flex;
     justify-content:space-between;
-    margin-bottom: 4vh;
-    font-size: medium;
+    margin-bottom: 6vh;
     font-weight: bold;
 }
 
-.app div.placesWeather p:focus{ color: green;}
+.app div.placesWeather p{
+  cursor: pointer;
+    text-transform: uppercase;
+}
+
+
+div.placesWeather p:hover{
+    color: green
+  }
+
 
 .app .result{
     margin-left: auto;
     margin-right: auto;
     padding-top: 20px;
     border-top: 2px solid #ddd;
+    margin-top: 3vh;
 }
 
 .app .result p{

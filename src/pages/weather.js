@@ -34,7 +34,7 @@ class Weather extends React.Component{
 
   }
 
-  handleClick =(e, id)=>{
+  handleClick =(id)=>{
 
     this.setState({
       value: ""
