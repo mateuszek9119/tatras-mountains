@@ -2,12 +2,10 @@
 header div{
     background-attachment: fixed;
     height: 50vh;
-    background-size: cover;
-    background-position: center -290px;
+    background-size: contain;
+    background-position: center bottom;
   }
 
-  header div.halaGasienicowa{ background-position: left -150px;}
-  header div.asign{ background-position: -10px -220px;}
 
   header div.asign{ background-image: url('../images/error.jpg'); }
   header div.pieniny{ background-image: url('../images/2.jpg');}
@@ -19,12 +17,16 @@ header div{
 @media( max-width: 450px){
 
     header div{
-        height: 50vh;
+        height: 60vh;
         background-size: cover;
-        background-position: center -290px;
+        background-position: left ;
     }
 
 
-    header div.halaGasienicowa{ background-position: left -150px;}
-    header div.asign{ background-position: -200px -50px;}
+    header div.asign{ background-image: url('../images/errors.jpg'); background-position: center; }
+    header div.pieniny{ background-image: url('../images/2s.jpg');    }
+    header div.halaGasienicowa{ background-image: url('../images/3s.jpg');}
+    header div.rocks{ background-image: url('../images/1s.jpg'); background-position: center;}
+    header div.mountainsSnow{ background-image: url('../images/4s.jpg'); background-position: right;}
+
 }

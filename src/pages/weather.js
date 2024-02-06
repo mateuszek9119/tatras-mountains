@@ -34,33 +34,29 @@ class Weather extends React.Component{
 
   }
 
-  handleClick =(id)=>{
+  handleClick =(e, id)=>{
 
     this.setState({
       value: ""
     })
 
-    
-    const szczyty = [
-   
-    {
-      id: 0,
-      url: `https://api.openweathermap.org/data/2.5/weather?lat=49.2322&lon=19.9818&limit=5&appid=${this.APIkey}&units=metric`,
-      name: "KASPROWY WIERCH"
-    },
 
-    {
-      id: 1,
-      url: `https://api.openweathermap.org/data/2.5/weather?lat=49.1795&lon=20.0881&limit=5&appid=${this.APIkey}&units=metric`,
-      name: "RYSY"
-    },
-
-    {
-      id: 2,
-      url: `https://api.openweathermap.org/data/2.5/weather?lat=49.2136&lon=20.0487&limit=5&appid=${this.APIkey}&units=metric`,
-      name: "DOLINA PIĘCIU STAWÓW"
-    }
-    
+    const szczyty = [   
+      {
+        id: 0,
+        url: `https://api.openweathermap.org/data/2.5/weather?lat=49.2322&lon=19.9818&limit=5&appid=${this.APIkey}&units=metric`,
+        name: "KASPROWY WIERCH"
+      },
+      {
+        id: 1,
+        url: `https://api.openweathermap.org/data/2.5/weather?lat=49.1795&lon=20.0881&limit=5&appid=${this.APIkey}&units=metric`,
+        name: "RYSY"
+      },
+      {
+        id: 2,
+        url: `https://api.openweathermap.org/data/2.5/weather?lat=49.2136&lon=20.0487&limit=5&appid=${this.APIkey}&units=metric`,
+        name: "DOLINA PIĘCIU STAWÓW"
+      }
   ]
 
   let API = null
@@ -74,18 +70,15 @@ class Weather extends React.Component{
       
   })
 
-    
-
-    fetch(API)
-      .then(response=>{
-        if(response.ok)
-        {
+  fetch(API)
+    .then(response=>{
+      if(response.ok){
           return response
-        }
-        throw Error("Coś poszło nie tak")
-      })
-      .then(response=> response.json())
-      .then(data=>{
+      }
+      throw Error("Coś poszło nie tak")
+    })
+    .then(response=> response.json())
+    .then(data=>{
         const time = new Date().toLocaleString();
         this.setState(prevState => ({
           date: time,
@@ -100,12 +93,12 @@ class Weather extends React.Component{
           err: false
         }))
       })
-      .catch( err =>{
+    .catch( err =>{
         console.log(err)
         this.setState(prevState=>({
         err: true,
         city: prevState.value
-      }))})
+    }))})
 
   }
 
@@ -157,10 +150,12 @@ class Weather extends React.Component{
   render(){
     return(
       <div className="app">
-        <div onClick={()=>this.handleClick(0)} >Kasprowy Wierch</div>
-        <div onClick={()=>this.handleClick(1)} >Rysy</div>
-        <div onClick={()=>this.handleClick(2)} >Dolina pięciu stawów</div>
-        <Form value = {this.state.value} change = {this.handleInputChange} />
+        <div class="placesWeather">
+            <p onClick={()=>this.handleClick(0)} >Kasprowy Wierch</p>
+            <p onClick={()=>this.handleClick(1)} >Rysy</p>
+            <p onClick={()=>this.handleClick(2)} >Dolina pięciu stawów</p>
+        </div>
+         <Form value = {this.state.value} change = {this.handleInputChange} />
         <Result weather={this.state}/>
       </div>
     )

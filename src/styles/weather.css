@@ -12,6 +12,15 @@
     transition: .3s;
 }
 
+.app div.placesWeather{
+    display: flex;
+    justify-content:space-between;
+    margin-bottom: 4vh;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.app div.placesWeather p:focus{ color: green;}
 
 .app .result{
     margin-left: auto;
@@ -25,3 +34,4 @@
     line-height: 200%;
     font-weight: normal; 
 }
+
