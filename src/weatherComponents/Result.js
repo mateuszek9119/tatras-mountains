@@ -20,7 +20,7 @@ const Result = (props) => {
 
         content = (
             <>"
-                <p style={{ textTransform: "uppercase", marginBottom: "1vh", }}>Aktualna informacaje pogodowe:</p>
+                <p style={{ textTransform: "uppercase", marginBottom: "1vh", }}>Aktualne informacaje pogodowe:</p>
                 <p><strong style={{ textTransform: "uppercase" }}>{city}</strong> ( <em>{date}</em> )</p>
                 <p class="icon"><img src={ico} />  </p>
                 <p>Temperatura: {temp >= 0 ? Math.ceil(temp) : Math.floor(temp)} &#176;C</p>
