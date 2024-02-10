@@ -19,7 +19,7 @@ const Result = (props) => {
         const windSpeedGust = Math.round((windGust * 3.6) * 10) / 10;
 
         content = (
-            <>"
+            <>
                 <p style={{ textTransform: "uppercase", marginBottom: "1vh", }}>Aktualne informacaje pogodowe:</p>
                 <p><strong style={{ textTransform: "uppercase" }}>{city}</strong> ( <em>{date}</em> )</p>
                 <p class="icon"><img src={ico} />  </p>
