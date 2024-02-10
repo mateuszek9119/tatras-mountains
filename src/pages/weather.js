@@ -38,6 +38,10 @@ class Weather extends React.Component {
 
   handleClick = (id) => {
 
+    //const header = document.querySelector("header div.halaGasienicowa")
+
+    //header.style.display = "none"
+
     this.setState({
       value: ""
     })

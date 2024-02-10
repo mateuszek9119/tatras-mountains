@@ -8,7 +8,7 @@ const Result = (props) => {
 
     if (!err && city) {
 
-        window.scrollTo(0, window.innerHeight / 3)
+        window.scrollTo(0, window.innerHeight / 2)
 
         const sunriseTime = new Date(sunrise * 1000).toLocaleTimeString();
         const sunsetTime = new Date(sunset * 1000).toLocaleTimeString();
@@ -19,14 +19,14 @@ const Result = (props) => {
         const windSpeedGust = Math.round((windGust * 3.6) * 10) / 10;
 
         content = (
-            <>
-                <p class="icon"><img src={ico} /> </p>
-                <p style={{ textTransform: "uppercase" }}>Aktualna informacaje pogodowe:</p>
+            <>"
+                <p style={{ textTransform: "uppercase", marginBottom: "1vh", }}>Aktualna informacaje pogodowe:</p>
                 <p><strong style={{ textTransform: "uppercase" }}>{city}</strong> ( <em>{date}</em> )</p>
-                <p>Temperatura: {temp} &#176;C</p>
-                <p>Temperatura odczuwalna: {temp_feels} &#176;C</p>
-                <p>Siła wiatru: {windSpeed} km/h</p>
-                <p>Porywy wiatru: {windSpeedGust ? windSpeedGust : windSpeed * 2.2} km/h</p>
+                <p class="icon"><img src={ico} />  </p>
+                <p>Temperatura: {temp >= 0 ? Math.ceil(temp) : Math.floor(temp)} &#176;C</p>
+                <p>Temperatura odczuwalna: {temp_feels ? Math.ceil(temp_feels) : Math.floor(temp_feels)} &#176;C</p>
+                <p>Siła wiatru: {Math.ceil(windSpeed)} km/h</p>
+                <p>Porywy wiatru: {windSpeedGust ? Math.ceil(windSpeedGust) : Math.ceil(windSpeed * 2.2)} km/h</p>
                 <p>Zachmurzenie: {clouds}%</p>
                 <p>Wschód słońca: {sunriseTime}</p>
                 <p>Zachód słońca: {sunsetTime}</p>
