@@ -1,3 +1,19 @@
+.disable-selection {
+    -webkit-touch-callout: none;
+    /* iOS Safari                           */
+    -webkit-user-select: none;
+    /* Safari                               */
+    -khtml-user-select: none;
+    /* Konqueror HTML                       */
+    -moz-user-select: none;
+    /* Firefox w przeszłości (stare wersje) */
+    -ms-user-select: none;
+    /* Internet Explorer (>=10) / Edge      */
+    user-select: none;
+    /* Aktualnie wspierane przez:           */
+    /* Chrome, Opera and Firefox            */
+}
+
 .app form input {
     display: block;
     margin-left: auto;

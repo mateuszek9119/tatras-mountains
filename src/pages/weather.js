@@ -172,7 +172,7 @@ class Weather extends React.Component {
     return (
       <div className="app">
         <div className="placesWeather">
-          <p onClick={() => this.handleClick(0)} >Kasprowy Wierch</p>
+          <p className='disable-selection' onClick={() => this.handleClick(0)} >Kasprowy Wierchhh</p>
           <p onClick={() => this.handleClick(1)} >Rysy</p>
           <p onClick={() => this.handleClick(2)} >Dolina pięciu stawów</p>
           <p onClick={() => this.handleClick(3)} >Lomnický štít</p>
