@@ -13,7 +13,7 @@ const Result = (props) => {
         const sunriseTime = new Date(sunrise * 1000).toLocaleTimeString();
         const sunsetTime = new Date(sunset * 1000).toLocaleTimeString();
 
-        const ico = `http://openweathermap.org/img/wn/${icon}.png`;
+        const ico = `https://openweathermap.org/img/wn/${icon}.png`;
 
         const windSpeed = Math.round((wind * 3.6) * 10) / 10;
         const windSpeedGust = Math.round((windGust * 3.6) * 10) / 10;
