@@ -1,4 +1,4 @@
-.app form input{
+.app form input {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -12,25 +12,27 @@
     transition: .3s;
 }
 
-.app div.placesWeather{
+.app div.placesWeather {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     margin-bottom: 6vh;
     font-weight: bold;
+    flex-wrap: wrap;
+
 }
 
-.app div.placesWeather p{
-  cursor: pointer;
+.app div.placesWeather p {
+    cursor: pointer;
     text-transform: uppercase;
 }
 
 
-div.placesWeather p:hover{
+div.placesWeather p:hover {
     color: green
-  }
+}
 
 
-.app .result{
+.app .result {
     margin-left: auto;
     margin-right: auto;
     padding-top: 20px;
@@ -38,9 +40,46 @@ div.placesWeather p:hover{
     margin-top: 3vh;
 }
 
-.app .result p{
-    text-align: center;;
+.app .result p {
+    text-align: center;
+    ;
     line-height: 200%;
-    font-weight: normal; 
+    font-weight: normal;
 }
 
+p.icon img {
+    height: 80px;
+    width: 80px;
+}
+
+@media (max-width: 1200px) {
+
+    .app div.placesWeather {
+        flex-direction: column;
+        font-weight: normal;
+        text-align: center;
+        margin-bottom: 3.5vh;
+    }
+
+    .app div.placesWeather p {
+        margin-bottom: 1vh;
+    }
+
+    p.icon img {
+        height: 50px;
+        width: 50px;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .app div.placesWeather {
+        margin-bottom: .5vh;
+    }
+
+
+    .app div.placesWeather p {
+        margin-bottom: 1.5vh;
+    }
+
+}

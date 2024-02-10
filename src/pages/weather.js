@@ -3,9 +3,9 @@ import Form from '../weatherComponents/Form'
 import Result from '../weatherComponents/Result'
 import "../styles/weather.css"
 
-class Weather extends React.Component{
+class Weather extends React.Component {
 
-  state ={
+  state = {
     value: "",
     date: "",
     city: "",
@@ -15,7 +15,9 @@ class Weather extends React.Component{
     temp: "",
     temp_feels: "",
     wind: "",
+    windGust: "",
     clouds: "",
+    icon: "",
     err: false,
   }
 
@@ -26,7 +28,7 @@ class Weather extends React.Component{
 
   //APIkey2 = "PwiGon3qF21Blhbe"
 
-  handleInputChange = (event)=>{
+  handleInputChange = (event) => {
 
     this.setState({
       value: event.target.value
@@ -34,14 +36,14 @@ class Weather extends React.Component{
 
   }
 
-  handleClick =(id)=>{
+  handleClick = (id) => {
 
     this.setState({
       value: ""
     })
 
 
-    const szczyty = [   
+    const szczyty = [
       {
         id: 0,
         url: `https://api.openweathermap.org/data/2.5/weather?lat=49.2322&lon=19.9818&limit=5&appid=${this.APIkey}&units=metric`,
@@ -56,29 +58,39 @@ class Weather extends React.Component{
         id: 2,
         url: `https://api.openweathermap.org/data/2.5/weather?lat=49.2136&lon=20.0487&limit=5&appid=${this.APIkey}&units=metric`,
         name: "DOLINA PIĘCIU STAWÓW"
+      },
+      {
+        id: 3,
+        url: `https://api.openweathermap.org/data/2.5/weather?lat=49.1953&lon=20.2131&limit=5&appid=${this.APIkey}&units=metric`,
+        name: "Lomnický štít"
+      },
+      {
+        id: 4,
+        url: `https://api.openweathermap.org/data/2.5/weather?lat=49.2192&lon=20.0165&limit=5&appid=${this.APIkey}&units=metric`,
+        name: "Zawrat"
       }
-  ]
+    ]
 
-  let API = null
-  let placeName = null;
+    let API = null
+    let placeName = null;
 
-  szczyty.forEach(item=>{
-    if(id === item.id) {
-      API = item.url
-      placeName = item.name
-    }
-      
-  })
-
-  fetch(API)
-    .then(response=>{
-      if(response.ok){
-          return response
+    szczyty.forEach(item => {
+      if (id === item.id) {
+        API = item.url
+        placeName = item.name
       }
-      throw Error("Coś poszło nie tak")
+
     })
-    .then(response=> response.json())
-    .then(data=>{
+
+    fetch(API)
+      .then(response => {
+        if (response.ok) {
+          return response
+        }
+        throw Error("Coś poszło nie tak")
+      })
+      .then(response => response.json())
+      .then(data => {
         const time = new Date().toLocaleString();
         this.setState(prevState => ({
           date: time,
@@ -89,74 +101,81 @@ class Weather extends React.Component{
           temp: data.main.temp,
           temp_feels: data.main.feels_like,
           wind: data.wind.speed,
+          windGust: data.wind.gust,
           clouds: data.clouds.all,
+          icon: data.weather[0].icon,
           err: false
         }))
       })
-    .catch( err =>{
+      .catch(err => {
         console.log(err)
-        this.setState(prevState=>({
-        err: true,
-        city: prevState.value
-    }))})
+        this.setState(prevState => ({
+          err: true,
+          city: prevState.value
+        }))
+      })
 
   }
 
- 
-  componentDidUpdate(prevProps, prevState){
-    
-    if(this.state.value.length === 0) return
-    if(prevState.value !== this.state.value){
+
+  componentDidUpdate(prevProps, prevState) {
+
+    if (this.state.value.length === 0) return
+    if (prevState.value !== this.state.value) {
 
       const API = `https://api.openweathermap.org/data/2.5/weather?q=${this.state.value},pl&APPID=${this.APIkey}&units=metric`
 
-      
+
       //const API2 = `https://my.meteoblue.com/packages/basic-1h_basic-day?apikey=${this.APIkey2}&lat=49.2199&lon=20.0153&asl=2247&format=json`
-  
+
       fetch(API)
-      .then(response=>{
-        if(response.ok)
-        {
-          return response
-        }
-        throw Error("Coś poszło nie tak")
-      })
-      .then(response=> response.json())
-      .then(data=>{
-        const time = new Date().toLocaleString();
-        this.setState(prevState => ({
-          date: time,
-          city: prevState.value,
-          sunrise: data.sys.sunrise,
-          sunset: data.sys.sunset,
-          pressure: data.main.pressure,
-          temp: data.main.temp,
-          temp_feels: data.main.feels_like,
-          wind: data.wind.speed,
-          clouds: data.clouds.all,
-          err: false
-        }))
-      })
-      .catch( err =>{
-        console.log(err)
-        this.setState(prevState=>({
-        err: true,
-        city: prevState.value
-      }))})
+        .then(response => {
+          if (response.ok) {
+            return response
+          }
+          throw Error("Coś poszło nie tak")
+        })
+        .then(response => response.json())
+        .then(data => {
+          const time = new Date().toLocaleString();
+          this.setState(prevState => ({
+            date: time,
+            city: prevState.value,
+            sunrise: data.sys.sunrise,
+            sunset: data.sys.sunset,
+            pressure: data.main.pressure,
+            temp: data.main.temp,
+            temp_feels: data.main.feels_like,
+            wind: data.wind.speed,
+            windGust: data.wind.gust,
+            clouds: data.clouds.all,
+            icon: data.weather[0].icon,
+            err: false
+          }))
+        })
+        .catch(err => {
+          console.log(err)
+          this.setState(prevState => ({
+            err: true,
+            city: prevState.value
+          }))
+        })
     }
-  
+
   }
 
-  render(){
-    return(
+  render() {
+    return (
       <div className="app">
-        <div class="placesWeather">
-            <p onClick={()=>this.handleClick(0)} >Kasprowy Wierch</p>
-            <p onClick={()=>this.handleClick(1)} >Rysy</p>
-            <p onClick={()=>this.handleClick(2)} >Dolina pięciu stawów</p>
+        <div className="placesWeather">
+          <p onClick={() => this.handleClick(0)} >Kasprowy Wierch</p>
+          <p onClick={() => this.handleClick(1)} >Rysy</p>
+          <p onClick={() => this.handleClick(2)} >Dolina pięciu stawów</p>
+          <p onClick={() => this.handleClick(3)} >Lomnický štít</p>
+          <p onClick={() => this.handleClick(4)} >Zawrat</p>
         </div>
-         <Form value = {this.state.value} change = {this.handleInputChange} />
-        <Result weather={this.state}/>
+        <Form value={this.state.value} change={this.handleInputChange} />
+        <Result weather={this.state} />
       </div>
     )
   }
