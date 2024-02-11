@@ -42,6 +42,12 @@
     text-transform: uppercase;
 }
 
+.app ul.placesWeather li a {
+    text-decoration: none;
+    color: black;
+    list-style: none
+}
+
 
 ul.placesWeather li:hover {
     color: green
@@ -69,6 +75,13 @@ ul.placesWeather li button:hover {
 p.icon img {
     height: 80px;
     width: 80px;
+}
+
+
+.app ul.placesWeather li button {
+    border: none;
+    background-color: inherit;
+    text-transform: uppercase;
 }
 
 @media (max-width: 1200px) {
@@ -99,12 +112,6 @@ p.icon img {
 
     .app ul.placesWeather li {
         margin-bottom: 1.5vh;
-    }
-
-    .app ul.placesWeather li button {
-        border: none;
-        background-color: inherit;
-        text-transform: uppercase;
     }
 
 }

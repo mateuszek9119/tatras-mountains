@@ -24,9 +24,38 @@ class Weather extends React.Component {
   // klucz do api
   //APIkey = "dbde02f9c2b523cec86a9bdfec813df0";
 
-  APIkey = "864b44a12dea05740819f7ae0f177350"
+  APIkey = "864b44a12dea05740819f7ae0f177350";
 
   //APIkey2 = "PwiGon3qF21Blhbe"
+
+
+  peaks = [
+    {
+      id: 0,
+      url: `https://api.openweathermap.org/data/2.5/weather?lat=49.2322&lon=19.9818&limit=5&appid=${this.APIkey}&units=metric`,
+      name: "KASPROWY WIERCH"
+    },
+    {
+      id: 1,
+      url: `https://api.openweathermap.org/data/2.5/weather?lat=49.1795&lon=20.0881&limit=5&appid=${this.APIkey}&units=metric`,
+      name: "RYSY"
+    },
+    {
+      id: 2,
+      url: `https://api.openweathermap.org/data/2.5/weather?lat=49.2136&lon=20.0487&limit=5&appid=${this.APIkey}&units=metric`,
+      name: "DOLINA PIĘCIU STAWÓW"
+    },
+    {
+      id: 3,
+      url: `https://api.openweathermap.org/data/2.5/weather?lat=49.1953&lon=20.2131&limit=5&appid=${this.APIkey}&units=metric`,
+      name: "Lomnický štít"
+    },
+    {
+      id: 4,
+      url: `https://api.openweathermap.org/data/2.5/weather?lat=49.2192&lon=20.0165&limit=5&appid=${this.APIkey}&units=metric`,
+      name: "Zawrat"
+    }
+  ];
 
   handleInputChange = (event) => {
 
@@ -47,38 +76,10 @@ class Weather extends React.Component {
     })
 
 
-    const szczyty = [
-      {
-        id: 0,
-        url: `https://api.openweathermap.org/data/2.5/weather?lat=49.2322&lon=19.9818&limit=5&appid=${this.APIkey}&units=metric`,
-        name: "KASPROWY WIERCH"
-      },
-      {
-        id: 1,
-        url: `https://api.openweathermap.org/data/2.5/weather?lat=49.1795&lon=20.0881&limit=5&appid=${this.APIkey}&units=metric`,
-        name: "RYSY"
-      },
-      {
-        id: 2,
-        url: `https://api.openweathermap.org/data/2.5/weather?lat=49.2136&lon=20.0487&limit=5&appid=${this.APIkey}&units=metric`,
-        name: "DOLINA PIĘCIU STAWÓW"
-      },
-      {
-        id: 3,
-        url: `https://api.openweathermap.org/data/2.5/weather?lat=49.1953&lon=20.2131&limit=5&appid=${this.APIkey}&units=metric`,
-        name: "Lomnický štít"
-      },
-      {
-        id: 4,
-        url: `https://api.openweathermap.org/data/2.5/weather?lat=49.2192&lon=20.0165&limit=5&appid=${this.APIkey}&units=metric`,
-        name: "Zawrat"
-      }
-    ]
-
     let API = null
     let placeName = null;
 
-    szczyty.forEach(item => {
+    this.peaks.forEach(item => {
       if (id === item.id) {
         API = item.url
         placeName = item.name
@@ -120,7 +121,6 @@ class Weather extends React.Component {
       })
 
   }
-
 
   componentDidUpdate(prevProps, prevState) {
 
@@ -168,15 +168,14 @@ class Weather extends React.Component {
 
   }
 
+  peaksName = this.peaks.map((peak) => <li key={peak.id} onClick={() => this.handleClick(peak.id)} ><button>{peak.name}</button></li>)
+
   render() {
+
     return (
       <div className="app">
         <ul className="placesWeather">
-          <li><a onClick={() => this.handleClick(0)} >Kasprowy Wierch</a></li>
-          <li><a onClick={() => this.handleClick(1)} >Rysy</a></li>
-          <li><button onClick={() => this.handleClick(2)} >Dolina pięciu stawów</button></li>
-          <li><a onClick={() => this.handleClick(3)} >Lomnický štít</a></li>
-          <li><a onClick={() => this.handleClick(4)} >Zawrat</a></li>
+          {this.peaksName}
         </ul>
         <Form value={this.state.value} change={this.handleInputChange} />
         <Result weather={this.state} />
