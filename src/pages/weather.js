@@ -18,6 +18,7 @@ class Weather extends React.Component {
     windGust: "",
     clouds: "",
     icon: "",
+    description: "",
     err: false,
   }
 
@@ -32,27 +33,27 @@ class Weather extends React.Component {
   peaks = [
     {
       id: 0,
-      url: `https://api.openweathermap.org/data/2.5/weather?lat=49.2322&lon=19.9818&limit=5&appid=${this.APIkey}&units=metric`,
+      url: `https://api.openweathermap.org/data/2.5/weather?lat=49.2322&lon=19.9818&limit=5&appid=${this.APIkey}&units=metric&lang=pl`,
       name: "KASPROWY WIERCH"
     },
     {
       id: 1,
-      url: `https://api.openweathermap.org/data/2.5/weather?lat=49.1795&lon=20.0881&limit=5&appid=${this.APIkey}&units=metric`,
+      url: `https://api.openweathermap.org/data/2.5/weather?lat=49.1795&lon=20.0881&limit=5&appid=${this.APIkey}&units=metric&lang=pl`,
       name: "RYSY"
     },
     {
       id: 2,
-      url: `https://api.openweathermap.org/data/2.5/weather?lat=49.2136&lon=20.0487&limit=5&appid=${this.APIkey}&units=metric`,
+      url: `https://api.openweathermap.org/data/2.5/weather?lat=49.2136&lon=20.0487&limit=5&appid=${this.APIkey}&units=metric&lang=pl`,
       name: "DOLINA PIĘCIU STAWÓW"
     },
     {
       id: 3,
-      url: `https://api.openweathermap.org/data/2.5/weather?lat=49.1953&lon=20.2131&limit=5&appid=${this.APIkey}&units=metric`,
+      url: `https://api.openweathermap.org/data/2.5/weather?lat=49.1953&lon=20.2131&limit=5&appid=${this.APIkey}&units=metric&lang=pl`,
       name: "Lomnický štít"
     },
     {
       id: 4,
-      url: `https://api.openweathermap.org/data/2.5/weather?lat=49.2192&lon=20.0165&limit=5&appid=${this.APIkey}&units=metric`,
+      url: `https://api.openweathermap.org/data/2.5/weather?lat=49.2192&lon=20.0165&limit=5&appid=${this.APIkey}&units=metric&lang=pl`,
       name: "Zawrat"
     }
   ];
@@ -109,6 +110,7 @@ class Weather extends React.Component {
           windGust: data.wind.gust,
           clouds: data.clouds.all,
           icon: data.weather[0].icon,
+          description: data.weather[0].description,
           err: false
         }))
       })
@@ -127,7 +129,7 @@ class Weather extends React.Component {
     if (this.state.value.length === 0) return
     if (prevState.value !== this.state.value) {
 
-      const API = `https://api.openweathermap.org/data/2.5/weather?q=${this.state.value},pl&APPID=${this.APIkey}&units=metric`
+      const API = `https://api.openweathermap.org/data/2.5/weather?q=${this.state.value},pl&APPID=${this.APIkey}&units=metric&lang=pl`
 
 
       //const API2 = `https://my.meteoblue.com/packages/basic-1h_basic-day?apikey=${this.APIkey2}&lat=49.2199&lon=20.0153&asl=2247&format=json`
@@ -154,6 +156,7 @@ class Weather extends React.Component {
             windGust: data.wind.gust,
             clouds: data.clouds.all,
             icon: data.weather[0].icon,
+            description: data.weather[0].description,
             err: false
           }))
         })

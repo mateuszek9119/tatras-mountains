@@ -2,9 +2,9 @@ import React from 'react'
 
 const Result = (props) => {
 
-    const { date, city, sunrise, sunset, pressure, temp, temp_feels, wind, windGust, clouds, icon, err } = props.weather
+    const { date, city, sunrise, sunset, pressure, temp, temp_feels, wind, windGust, clouds, icon, description, err } = props.weather
 
-    let content = null
+    let content = null;
 
     if (!err && city) {
 
@@ -15,21 +15,22 @@ const Result = (props) => {
 
         const ico = `https://openweathermap.org/img/wn/${icon}.png`;
 
+
         const windSpeed = Math.round((wind * 3.6) * 10) / 10;
         const windSpeedGust = Math.round((windGust * 3.6) * 10) / 10;
 
         content = (
             <>
                 <p style={{ textTransform: "uppercase", marginBottom: "1vh", }}>Aktualne informacaje pogodowe:</p>
-                <p><strong style={{ textTransform: "uppercase" }}>{city}</strong> ( <em>{date}</em> )</p>
-                <p class="icon"><img src={ico} />  </p>
-                <p>Temperatura: {temp >= 0 ? Math.ceil(temp) : Math.floor(temp)} &#176;C</p>
-                <p>Temperatura odczuwalna: {temp_feels ? Math.ceil(temp_feels) : Math.floor(temp_feels)} &#176;C</p>
-                <p>Siła wiatru: {Math.ceil(windSpeed)} km/h</p>
-                <p>Porywy wiatru: {windSpeedGust ? Math.ceil(windSpeedGust) : Math.ceil(windSpeed * 2.2)} km/h</p>
-                <p>Zachmurzenie: {clouds}%</p>
-                <p>Wschód słońca: {sunriseTime}</p>
-                <p>Zachód słońca: {sunsetTime}</p>
+                <p><strong style={{ textTransform: "uppercase" }}>{city}</strong> <span>({date})</span> </p>
+                <p class="icon"><img src={ico} alt={description} /><span>  {description} </span> <img src={ico} alt={description} /><span></span></p>
+                <p><span>Temperatura:</span> <span>{temp >= 0 ? Math.ceil(temp) : Math.floor(temp)} &#176;C</span></p>
+                <p><span>Temperatura odczuwalna:</span> <span>{temp_feels ? Math.ceil(temp_feels) : Math.floor(temp_feels)} &#176;C</span></p>
+                <p><span>Siła wiatru:</span> <span>{Math.ceil(windSpeed)} km/h</span></p>
+                <p> <span>Porywy wiatru:</span> <span>{windSpeedGust ? Math.ceil(windSpeedGust) : Math.ceil(windSpeed * 2.2)} km/h</span> </p>
+                <p><span>Zachmurzenie:</span><span>{clouds}%</span> </p>
+                <p><span>Wschód słońca:</span><span>{sunriseTime}</span></p>
+                <p><span>Zachód słońca:</span><span>{sunsetTime}</span></p>
             </>
         )
     }
