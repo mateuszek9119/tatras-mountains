@@ -63,7 +63,11 @@ aside.show {
   left: 0
 }
 
-@media (max-width: 900px) {
+@media(max-width: 1200px) {
+  aside {}
+}
+
+@media (max-width: 800px) {
 
   div.app {
     width: 100%;
