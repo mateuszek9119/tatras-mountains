@@ -64,12 +64,17 @@ p.icon img {
     }
 
     .app form input {
-        padding: 8px 16px;
+        padding: 6px 12px;
         font-size: 12px;
     }
 
     .app .result {
-        font-size: 16px;
+        font-size: 14px;
+    }
+
+    p.icon img {
+        height: 50px;
+        width: 50px;
     }
 }
 
@@ -102,5 +107,11 @@ p.icon img {
     .app ul.placesWeather li {
         margin-bottom: 1.5vh;
     }
+
+    .app ul.placesWeather li button {
+        font-size: 16px;
+    }
+
+
 
 }

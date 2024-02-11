@@ -1,29 +1,69 @@
-
-header div{
+header div {
     background-attachment: fixed;
     height: 50vh;
     background-size: cover;
     background-position: center bottom;
-  }
+}
 
 
-  header div.asign{ background-image: url('../images/error.jpg'); }
-  header div.pieniny{ background-image: url('../images/2.jpg');}
-  header div.halaGasienicowa{ background-image: url('../images/3.jpg');}
-  header div.rocks{ background-image: url('../images/1.jpg');}
-  header div.mountainsSnow{ background-image: url('../images/4.jpg');}
-  header div.asign{ background-image: url('../images/error.jpg');}
+header div.asign {
+    background-image: url('../images/error.jpg');
+}
 
-@media( max-width: 450px){
+header div.pieniny {
+    background-image: url('../images/2.jpg');
+}
 
-    header div{
+header div.halaGasienicowa {
+    background-image: url('../images/3.jpg');
+}
+
+header div.rocks {
+    background-image: url('../images/1.jpg');
+}
+
+header div.mountainsSnow {
+    background-image: url('../images/4.jpg');
+}
+
+header div.asign {
+    background-image: url('../images/error.jpg');
+}
+
+@media(max-width: 900px) {
+    header div {
+        height: 35vh;
+
+    }
+}
+
+@media(max-width: 600px) {
+
+    header div {
         height: 60vh;
-        background-position: left ;
+        background-position: left;
     }
 
-    header div.asign{ background-image: url('../images/errors.jpg'); background-position: center; }
-    header div.pieniny{ background-image: url('../images/2s.jpg');    }
-    header div.halaGasienicowa{ background-image: url('../images/3s.jpg');}
-    header div.rocks{ background-image: url('../images/1s.jpg'); background-position: center;}
-    header div.mountainsSnow{ background-image: url('../images/4s.jpg'); background-position: right;}
+    header div.asign {
+        background-image: url('../images/errors.jpg');
+        background-position: center;
+    }
+
+    header div.pieniny {
+        background-image: url('../images/2s.jpg');
+    }
+
+    header div.halaGasienicowa {
+        background-image: url('../images/3s.jpg');
+    }
+
+    header div.rocks {
+        background-image: url('../images/1s.jpg');
+        background-position: center;
+    }
+
+    header div.mountainsSnow {
+        background-image: url('../images/4s.jpg');
+        background-position: right;
+    }
 }

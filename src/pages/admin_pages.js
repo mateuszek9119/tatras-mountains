@@ -1,11 +1,11 @@
 import "../styles/adminPages.css"
 
-const AdminPage = ()=>{
+const AdminPage = () => {
 
-    return(
+    return (
         <form>
             <input type="text" placeholder="login" />
-            <input type="password" placeholder="password"/>
+            <input type="password" placeholder="password" />
         </form>
     )
 
