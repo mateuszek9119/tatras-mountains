@@ -63,20 +63,25 @@ aside.show {
   left: 0
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 900px) {
 
-  aside nav.main a {
-    font-size: 14px;
-    padding-right: 5px;
+  div.app {
+    width: 100%;
   }
 
   section.page {
     font-size: 16px;
   }
 
+  aside {
+    min-width: 18%;
+    font-size: 10px;
+  }
+
+
 }
 
-@media (max-width: 900px) {
+@media (max-width: 600px) {
 
   div.app {
     width: 100%;
@@ -93,24 +98,8 @@ aside.show {
     transition: .3s linear;
   }
 
-  aside nav.main a {
-    color: white;
-    font-size: 10px;
-    padding: 20px;
-  }
-
   section.page {
     font-size: 14px;
-  }
-
-
-
-  aside nav.main a.active {
-    border-left: 5px solid grey;
-  }
-
-  .burger {
-    display: block;
   }
 
 }

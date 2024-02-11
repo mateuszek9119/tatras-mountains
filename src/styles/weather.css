@@ -84,7 +84,7 @@ p.icon img {
     text-transform: uppercase;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 800px) {
 
     .app ul.placesWeather {
         flex-direction: column;
@@ -103,7 +103,7 @@ p.icon img {
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 600px) {
 
     .app ul.placesWeather {
         margin-bottom: .5vh;
