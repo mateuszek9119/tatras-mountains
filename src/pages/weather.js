@@ -171,13 +171,13 @@ class Weather extends React.Component {
   render() {
     return (
       <div className="app">
-        <div className="placesWeather">
-          <p className='disable-selection' onClick={() => this.handleClick(0)} >Kasprowy Wierchhh</p>
-          <p onClick={() => this.handleClick(1)} >Rysy</p>
-          <p onClick={() => this.handleClick(2)} >Dolina pięciu stawów</p>
-          <p onClick={() => this.handleClick(3)} >Lomnický štít</p>
-          <p onClick={() => this.handleClick(4)} >Zawrat</p>
-        </div>
+        <ul className="placesWeather">
+          <li><a onClick={() => this.handleClick(0)} >Kasprowy Wierch</a></li>
+          <li><a onClick={() => this.handleClick(1)} >Rysy</a></li>
+          <li><button onClick={() => this.handleClick(2)} >Dolina pięciu stawów</button></li>
+          <li><a onClick={() => this.handleClick(3)} >Lomnický štít</a></li>
+          <li><a onClick={() => this.handleClick(4)} >Zawrat</a></li>
+        </ul>
         <Form value={this.state.value} change={this.handleInputChange} />
         <Result weather={this.state} />
       </div>

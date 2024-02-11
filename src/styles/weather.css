@@ -28,25 +28,28 @@
     transition: .3s;
 }
 
-.app div.placesWeather {
+.app ul.placesWeather {
     display: flex;
     justify-content: space-between;
     margin-bottom: 6vh;
     font-weight: bold;
     flex-wrap: wrap;
-
 }
 
-.app div.placesWeather p {
+
+.app ul.placesWeather li {
     cursor: pointer;
     text-transform: uppercase;
 }
 
 
-div.placesWeather p:hover {
+ul.placesWeather li:hover {
     color: green
 }
 
+ul.placesWeather li button:hover {
+    color: green
+}
 
 .app .result {
     margin-left: auto;
@@ -70,14 +73,14 @@ p.icon img {
 
 @media (max-width: 1200px) {
 
-    .app div.placesWeather {
+    .app ul.placesWeather {
         flex-direction: column;
         font-weight: normal;
         text-align: center;
         margin-bottom: 3.5vh;
     }
 
-    .app div.placesWeather p {
+    .app ul.placesWeather li {
         margin-bottom: 1vh;
     }
 
@@ -89,13 +92,19 @@ p.icon img {
 
 @media (max-width: 900px) {
 
-    .app div.placesWeather {
+    .app ul.placesWeather {
         margin-bottom: .5vh;
     }
 
 
-    .app div.placesWeather p {
+    .app ul.placesWeather li {
         margin-bottom: 1.5vh;
+    }
+
+    .app ul.placesWeather li button {
+        border: none;
+        background-color: inherit;
+        text-transform: uppercase;
     }
 
 }
