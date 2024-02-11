@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/tatras-mountains/static/css/main.ef7ac997.css",
+    "main.css": "/tatras-mountains/static/css/main.d0fe9f9a.css",
     "main.js": "/tatras-mountains/static/js/main.133cf294.js",
     "static/media/4.jpg": "/tatras-mountains/static/media/4.f86a12ea854e2ac5efba.jpg",
     "static/media/2.jpg": "/tatras-mountains/static/media/2.ad83b7970a2b333cccdf.jpg",
@@ -13,11 +13,11 @@
     "static/media/4s.jpg": "/tatras-mountains/static/media/4s.f8169e7e1b28f9dfc5db.jpg",
     "static/media/errors.jpg": "/tatras-mountains/static/media/errors.41fa6c2d5b65fe7bfee1.jpg",
     "index.html": "/tatras-mountains/index.html",
-    "main.ef7ac997.css.map": "/tatras-mountains/static/css/main.ef7ac997.css.map",
+    "main.d0fe9f9a.css.map": "/tatras-mountains/static/css/main.d0fe9f9a.css.map",
     "main.133cf294.js.map": "/tatras-mountains/static/js/main.133cf294.js.map"
   },
   "entrypoints": [
-    "static/css/main.ef7ac997.css",
+    "static/css/main.d0fe9f9a.css",
     "static/js/main.133cf294.js"
   ]
 }
