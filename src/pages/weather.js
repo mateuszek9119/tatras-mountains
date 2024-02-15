@@ -55,8 +55,21 @@ class Weather extends React.Component {
       id: 4,
       url: `https://api.openweathermap.org/data/2.5/weather?lat=49.2192&lon=20.0165&limit=5&appid=${this.APIkey}&units=metric&lang=pl`,
       name: "Zawrat"
+    },
+    {
+      id: 5,
+      url: `https://api.openweathermap.org/data/2.5/weather?lat=49.1644&lon=20.1336&limit=5&appid=${this.APIkey}&units=metric&lang=pl`,
+      name: "Gerlach"
+    },
+    {
+      id: 6,
+      url: `https://api.openweathermap.org/data/2.5/weather?lat=49.2667&lon=19.8333&limit=5&appid=${this.APIkey}&units=metric&lang=pl`,
+      name: "Dolina Chochołowska"
     }
   ];
+
+
+
 
   handleInputChange = (event) => {
 
